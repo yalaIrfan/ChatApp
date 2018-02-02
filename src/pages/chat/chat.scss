@@ -5,6 +5,12 @@ page-chat {
         
     }
 
+    .footerNew{
+      display: flex;
+      flex-direction: row;
+      background: rgb(234, 234, 240);
+    }
+
 $stable: #f8f8f8 !default;
 
 .scroll {
