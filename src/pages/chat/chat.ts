@@ -36,6 +36,12 @@ export class ChatPage {
     console.log('ionViewDidLoad ChatPage');
   }
 
+  signoutA(){
+    //this._auth.auth.signOut();
+    this.navCtrl.setRoot(HomePage);
+    //this._auth.auth.signOut();
+  }
+
 send(){
   console.log(this.message);
   //this.history=this.db.list('/chat').snapshotChanges.subscribe();

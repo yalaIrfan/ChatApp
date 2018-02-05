@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the RegisterPage page.
@@ -18,7 +19,8 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     private _auth:AngularFireAuth,
     private alertCtrl:AlertController) {
 
@@ -43,6 +45,7 @@ export class RegisterPage {
     this._auth.auth.createUserWithEmailAndPassword(user,p.value).then((data)=>{
       this.showAlert("Success!","Register success.!");
       console.log(data);
+      this.navCtrl.push(LoginPage)
     }).catch(error=>{
       console.log('error')
       this.showAlert("Error!",error.message);

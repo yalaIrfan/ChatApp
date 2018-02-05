@@ -54,10 +54,6 @@ export class LoginPage {
     });
 
   }
-  signoutA(){
-    //this._auth.auth.signOut();
-    this.navCtrl.setRoot(HomePage);
-    this._auth.auth.signOut();
-  }
+ 
 
 }
