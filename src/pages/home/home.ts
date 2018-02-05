@@ -22,4 +22,5 @@ export class HomePage {
     console.log('register');
     this.navCtrl.push(RegisterPage);
   }
+  
 }

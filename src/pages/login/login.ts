@@ -4,6 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { LandingPage } from '../landing/landing';
 import { ChatPage } from '../chat/chat';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -52,6 +53,11 @@ export class LoginPage {
       this.showAlert("Error!",error.message);
     });
 
+  }
+  signoutA(){
+    //this._auth.auth.signOut();
+    this.navCtrl.setRoot(HomePage);
+    this._auth.auth.signOut();
   }
 
 }
